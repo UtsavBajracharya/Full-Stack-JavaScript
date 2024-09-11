@@ -1,7 +1,7 @@
 // Application using Express Framework
 
-express = require("express"); // imports the Express module. we can use Express' methods to define routes and middleware with this
-app = express(); // to set up routes, handle HTTP requests, and configure middleware
+const express = require("express"); // imports the Express module. we can use Express' methods to define routes and middleware with this
+const app = express(); // to set up routes, handle HTTP requests, and configure middleware
 
 app.get("/", (req, resp) => { // two arguments Represents the request object and response object
   resp.send("Welcome to Main Page!");
