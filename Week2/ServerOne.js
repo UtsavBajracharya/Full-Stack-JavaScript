@@ -1,22 +1,24 @@
-express = require("express");
-app = express();
+// Application using Express Framework
 
-app.get("/", (req, resp) => {
-  resp.sent("Welcome to Main Page!");
+express = require("express"); // imports the Express module. we can use Express' methods to define routes and middleware with this
+app = express(); // to set up routes, handle HTTP requests, and configure middleware
+
+app.get("/", (req, resp) => { // two arguments Represents the request object and response object
+  resp.send("Welcome to Main Page!");
 });
 
-app.get("/sales", (req, resp) => {
-  resp.sent("Welcome to Sales Department!");
+app.get("/sales", (req, resp) => { // route for the /sales URL
+  resp.send("Welcome to Sales Department!");
 });
 
-app.get("/sales/:name", (req, res) => {
-
+app.get("/sales/:name", (req, res) => { // "/sales/:name" for dynamically handling a request based on a product name provided in the URL.
   res.send(`We ran out of ${req.params.name}`);
 });
 
-app.listen(3000, '127.0.0.1');
+//The :name part is a route parameter, which means the server can capture whatever is placed in that part of the URL and use it.
 
-//In order to send a HTML file.
-// app.listen(3000, () => {
-//   console.log("Server is listening on por 3000");
-// });
+
+app.listen(3000, "127.0.0.1");
+
+// This tells the server to listen on port 3000 on the local machine with the IP address 127.0.0.1
+
