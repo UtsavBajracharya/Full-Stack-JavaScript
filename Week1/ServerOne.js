@@ -21,5 +21,5 @@ const server = http.createServer((req, res) => {
 });
 
 
-// In order ti send a HTML file
+// In order to send a HTML file
 server.listen(3000, "127.0.0.1");
