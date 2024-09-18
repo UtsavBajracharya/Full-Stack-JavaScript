@@ -16,8 +16,8 @@ app.get('/index.html', (req, res) => {
     const requestedFile = path.join(__dirname, 'public', req.params.filename);
 
     // Check if the file exists
-    fs.access(requestedFile, fs.constants.F_OK, (err) => {
-        if (err) {
+    fs.access(requestedFile, fs.constants.F_OK, (arr) => {
+        if (arr) {
             // File not found, send custom error message with red font
             res.status(404).send(`
                 <html>
