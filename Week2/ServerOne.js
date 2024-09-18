@@ -15,6 +15,7 @@ app.get("/sales/:name", (req, res) => { // "/sales/:name" for dynamically handli
   res.send(`We ran out of ${req.params.name}`);
 });
 
+
 //The :name part is a route parameter, which means the server can capture whatever is placed in that part of the URL and use it.
 
 
