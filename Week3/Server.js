@@ -8,12 +8,12 @@ const app = express();
 
 const port = 8080;
 
-// Middleware to serve static files from the "public" directory
-app.use(express.static('public'));
+// // Middleware to serve static files from the "public" directory
+// app.use(express.static('public'));
 
 // Route to serve requested HTML files
-app.get('/index.html', (req, res) => {
-    const requestedFile = path.join(__dirname, 'public', req.params.filename);
+app.get('/index1.html', (req, res) => {
+    const requestedFile = path.join(req.params.filename);
 
     // Check if the file exists
     fs.access(requestedFile, fs.constants.F_OK, (arr) => {
