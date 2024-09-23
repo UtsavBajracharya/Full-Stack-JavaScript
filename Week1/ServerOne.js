@@ -4,7 +4,7 @@ const fs = require("fs");
 
 const server = http.createServer((req, res) => {
 
-  fs.readFile("index1.html", (err, data) => {
+  fs.readFile("index.html", (err, data) => {
     if (err) {
       // File not found or error reading the file
       res.setHeader("Content-Type", "text/html");
